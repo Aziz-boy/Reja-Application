@@ -1,22 +1,81 @@
 console.log("Train.js is running")
+/*
+TASK F
+
+Yagona string argumentga ega findDoublers nomli function tuzing
+Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+true yokida false natija qaytarsin.
+
+MASALAN: findDoublers("hello"); natija true qaytadi. Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+*/
+
+function findDoublers(word) {
+    
+        const charCount = {}; 
+    
+        for (const char of word) { 
+        
+            if (charCount[char]) {
+               
+                return true; 
+            }
+            charCount[char] = 1;
+           
+        }
+    
+        return false; 
+    
+}
+
+console.log(findDoublers("hello"));
+
+
+
+
+
+
+// function moveZeros(nums){
+//     const isNotZero = nums.filter(num => num =! 0);
+//     const isZero = nums.filter(num => num < 0);
+//     const mergedArray = [...isNotZero,...isZero];
+   
+//     console.log(isNotZero) 
+//  }
+ 
+//  moveZeros();
+
+//  const arr = [ 0, 1, 0, 3, 12 ]
+
+//  const isNotZero = nums.filter(value => value !== 0);
+//  const isZero = nums.filter(num => num < 0);
+
+//  const mergedArray = [...isNotZero,...isZero];
+
+//  console.log(isNotZero) 
+
+ // let result = moveZeros([ 0, 1, 0, 3, 12 ])
+ // console.log(result)
+
+
+
+
 
 //E-TASK: 
 
 // Masalani izohi
 //Shunday function tuzing, u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
 //MASALAN: getReverse("hello") return qilsin "olleh"
-
-function getReverse(string) {
-    const stringReversed = string.split("").reverse().join("")
-    return stringReversed
-}
-
-console.log(getReverse("hello"))
+// function getReverse(string) {
+//     const stringReversed = string.split("").reverse().join("")
+//     return stringReversed
+// }
+// console.log(getReverse("hihello"))
   
-//TASK-D
 
+
+//TASK-D
 // Masalani izohi
-/*Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har 
+ /*Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har 
 ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 //MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true; */
 
@@ -26,6 +85,7 @@ ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 
 //     if (string_1arr === string_2arr) {
 //              return true
+
 //     }  else{
 //            return false
 //     } 
